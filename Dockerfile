@@ -31,7 +31,7 @@ COPY ./api/package*.json ./
 RUN npm install
 
 # Copy backend source code
-COPY ./backend .
+COPY ./api .
 
 # Build the backend
 RUN npm run build
