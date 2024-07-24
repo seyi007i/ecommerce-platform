@@ -22,9 +22,9 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
     - name: Build the Docker image
-      run: docker build -t seyiogunniran/ecommerce-app:$(date +%s) .
+      run: docker build -t seyiogunniran/ecommerce-app:latest .
 
     # Push the Docker image to Docker Hub
     - name: Push Docker image
       run: |
-        docker push seyiogunniran/ecommerce-app:$(date +%s)
+        docker push seyiogunniran/ecommerce-app:latest
